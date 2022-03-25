@@ -7,7 +7,7 @@ To use A,we need the following tools installed
 + boost 1.71
 
 ## Usage and Example
-1. uncompress the lib
+1. Uncompress the lib
 ```
 cd A_bin
 unzip lib.zip

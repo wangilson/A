@@ -1,0 +1,229 @@
+================================DEBUG_LOG====================================
+对第 1 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   33   reader1 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %19main))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   33   reader1 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %19main))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  sat
+中断中的访问点：52 : svp_simple_006_001_global_var1 = 0;
+------------------------r点的pathcondition:
+=======================Result=======================
+p点:33: reader1 = svp_simple_006_001_global_var1;
+r点:52: svp_simple_006_001_global_var1 = 0;
+c点:33: reader1 = svp_simple_006_001_global_var1;
+不存在一条可行路径p->r->c
+====================================================
+对第 2 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   33   reader1 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %19main))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   35   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 4 (Read w32 0 %24main))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  unsat
+=======================Result=======================
+p点:33: reader1 = svp_simple_006_001_global_var1;
+c点:35: reader2 = svp_simple_006_001_global_var1;
+p -> c 之间路径不可行
+=====================================================
+对第 3 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   35   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 4 (Read w32 0 %24main))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   33   reader1 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %19main))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  sat
+中断中的访问点：52 : svp_simple_006_001_global_var1 = 0;
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 35    reader2 = svp_simple_006_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_006_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_006_001_global_var1 的状态：
+(Eq 0 (Read w32 0 @svp_simple_006_001_global_var1))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_006_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_006_001_global_var2 的状态：
+(Eq 0 (Read w32 0 @svp_simple_006_001_global_var2))
+entry->r的路径约束：——entry->r无路径约束！
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:35: reader2 = svp_simple_006_001_global_var1;
+r点:52: svp_simple_006_001_global_var1 = 0;
+c点:33: reader1 = svp_simple_006_001_global_var1;
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 4 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   35   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 4 (Read w32 0 %24main))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   35   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 4 (Read w32 0 %24main))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  sat
+中断中的访问点：52 : svp_simple_006_001_global_var1 = 0;
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 35    reader2 = svp_simple_006_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_006_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_006_001_global_var1 的状态：
+(Eq 0 (Read w32 0 @svp_simple_006_001_global_var1))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_006_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_006_001_global_var2 的状态：
+(Eq 0 (Read w32 0 @svp_simple_006_001_global_var2))
+entry->r的路径约束：——entry->r无路径约束！
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:35: reader2 = svp_simple_006_001_global_var1;
+r点:52: svp_simple_006_001_global_var1 = 0;
+c点:35: reader2 = svp_simple_006_001_global_var1;
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 5 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   35   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 4 (Read w32 0 %24main))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   37   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 6 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 %3main))(Eq false
+     (Eq 4 (Read w32 0 %24main)))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  unsat
+=======================Result=======================
+p点:35: reader2 = svp_simple_006_001_global_var1;
+c点:37: reader2 = svp_simple_006_001_global_var1;
+p -> c 之间路径不可行
+=====================================================
+对第 6 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   37   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 6 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 %3main))(Eq false
+     (Eq 4 (Read w32 0 %24main)))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   33   reader1 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %19main))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  sat
+中断中的访问点：52 : svp_simple_006_001_global_var1 = 0;
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 35    reader2 = svp_simple_006_001_global_var1;
+------------------p->t路径不可行----------------------
+中断点：Line: 37    reader2 = svp_simple_006_001_global_var1;
+------------------p->t路径不可行----------------------
+=======================Result=======================
+p点:37: reader2 = svp_simple_006_001_global_var1;
+r点:52: svp_simple_006_001_global_var1 = 0;
+c点:33: reader1 = svp_simple_006_001_global_var1;
+不存在一条可行路径p->r->c
+====================================================
+对第 7 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   37   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 6 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 %3main))(Eq false
+     (Eq 4 (Read w32 0 %24main)))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   35   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 4 (Read w32 0 %24main))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  unsat
+=======================Result=======================
+p点:37: reader2 = svp_simple_006_001_global_var1;
+c点:35: reader2 = svp_simple_006_001_global_var1;
+p -> c 之间路径不可行
+=====================================================
+对第 8 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   37   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 6 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 %3main))(Eq false
+     (Eq 4 (Read w32 0 %24main)))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   37   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 6 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 %3main))(Eq false
+     (Eq 4 (Read w32 0 %24main)))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  unsat
+=======================Result=======================
+p点:37: reader2 = svp_simple_006_001_global_var1;
+c点:37: reader2 = svp_simple_006_001_global_var1;
+p -> c 之间路径不可行
+=====================================================
+对第 9 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var2
+W:  Line:   44   svp_simple_006_001_global_var2 = 0x02;
+路径约束条件(Expr)：
+(Slt (Read w32 0 %58main) (Read w32 0 %59main))(Eq (Read w32 0 %58main) (Read w32 0 %5main))(Eq (Read w32 0 %59main) (Read w32 0 %6main))(Eq 6 (Read w32 0 %55main))(Eq (Read w32 0 %55main)
+     (Add w32 (Read w32 0 %53main) (Read w32 0 %54main)))(Eq (Read w32 0 %53main) (Read w32 0 %5main))(Eq (Read w32 0 %54main) (Read w32 0 %6main))(Slt (Read w32 0 %50main) 5)(Eq (Read w32 0 %50main) (Read w32 0 %6main))(Slt (Read w32 0 %46main) 5)(Eq (Read w32 0 %46main) (Read w32 0 %5main))(Slt (Read w32 0 %46main) 5)(Eq (Read w32 0 %46main) (Read w32 0 %5main))(Slt (Read w32 0 %50main) 5)(Eq (Read w32 0 %50main) (Read w32 0 %6main))W:  Line:   44   svp_simple_006_001_global_var2 = 0x02;
+路径约束条件(Expr)：
+(Slt (Read w32 0 %58main) (Read w32 0 %59main))(Eq (Read w32 0 %58main) (Read w32 0 %5main))(Eq (Read w32 0 %59main) (Read w32 0 %6main))(Eq 6 (Read w32 0 %55main))(Eq (Read w32 0 %55main)
+     (Add w32 (Read w32 0 %53main) (Read w32 0 %54main)))(Eq (Read w32 0 %53main) (Read w32 0 %5main))(Eq (Read w32 0 %54main) (Read w32 0 %6main))(Slt (Read w32 0 %50main) 5)(Eq (Read w32 0 %50main) (Read w32 0 %6main))(Slt (Read w32 0 %46main) 5)(Eq (Read w32 0 %46main) (Read w32 0 %5main))(Slt (Read w32 0 %46main) 5)(Eq (Read w32 0 %46main) (Read w32 0 %5main))(Slt (Read w32 0 %50main) 5)(Eq (Read w32 0 %50main) (Read w32 0 %6main))******************************************Feasible:  sat
+中断中的访问点：53 : reader2 = svp_simple_006_001_global_var2;
+------------------------r点的pathcondition:
+中断点：Line: 44    svp_simple_006_001_global_var2 = 0x02;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_006_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_006_001_global_var1 的状态：
+(Eq 0 (Read w32 0 @svp_simple_006_001_global_var1))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_006_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_006_001_global_var2 的状态：
+(Eq 2 (Read w32 0 @svp_simple_006_001_global_var2))
+entry->r的路径约束：——entry->r无路径约束！
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:44: svp_simple_006_001_global_var2 = 0x02;
+r点:53: reader2 = svp_simple_006_001_global_var2;
+c点:44: svp_simple_006_001_global_var2 = 0x02;
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 10 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_006_001_global_var1
+R:  Line:   33   reader1 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %19main))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))R:  Line:   37   reader2 = svp_simple_006_001_global_var1;
+路径约束条件(Expr)：
+(Eq 6 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 %3main))(Eq false
+     (Eq 4 (Read w32 0 %24main)))(Eq (Read w32 0 %24main) (Read w32 0 %3main))(Eq false
+     (Eq 0 (Read w32 0 %19main)))(Eq (Read w32 0 %19main) (Read w32 0 %3main))(Eq (Read w32 0 %15main) (Read w32 0 %16main))(Eq (Read w32 0 %15main) (Read w32 0 %3main))(Eq (Read w32 0 %16main) (Read w32 0 %4main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %8main) 5)(Eq (Read w32 0 %8main) (Read w32 0 %3main))(Slt (Read w32 0 %12main) 5)(Eq (Read w32 0 %12main) (Read w32 0 %3main))******************************************Feasible:  unsat
+=======================Result=======================
+p点:33: reader1 = svp_simple_006_001_global_var1;
+c点:37: reader2 = svp_simple_006_001_global_var1;
+p -> c 之间路径不可行
+=====================================================
+=========================BUG=============================
+--------------------------变量：svp_simple_006_001_global_var1
+35 : reader2 = svp_simple_006_001_global_var1;
+52 : svp_simple_006_001_global_var1 = 0;
+33 : reader1 = svp_simple_006_001_global_var1;
+--------------------------------------------------------------
+--------------------------变量：svp_simple_006_001_global_var1
+35 : reader2 = svp_simple_006_001_global_var1;
+52 : svp_simple_006_001_global_var1 = 0;
+35 : reader2 = svp_simple_006_001_global_var1;
+--------------------------------------------------------------
+--------------------------变量：svp_simple_006_001_global_var2
+44 : svp_simple_006_001_global_var2 = 0x02;
+53 : reader2 = svp_simple_006_001_global_var2;
+44 : svp_simple_006_001_global_var2 = 0x02;
+--------------------------------------------------------------
+=========================BUG=============================
+
+=========================Test Report=============================
+共有10对二次访问序。其中有5对路径不可行。
+共有10对三次访问序。其中原子性违反3个。
+=========================Test Report=============================
+Runtime : 0.453125s
+

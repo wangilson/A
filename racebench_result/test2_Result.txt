@@ -1,0 +1,74 @@
+================================DEBUG_LOG====================================
+对第 1 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_002_001_global_array
+W:  Line:   33   if (i == TRIGGER) svp_simple_002_001_global_array[TRIGGER] = 1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %8svp_simple_002_001_isr_1))(Eq (Read w32 0 %8svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))W:  Line:   35   svp_simple_002_001_global_array[TRIGGER] = 1;
+路径约束条件(Expr)：
+(Eq 10001 (Read w32 0 %12svp_simple_002_001_isr_1))(Eq (Read w32 0 %12svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))******************************************Feasible:  unsat
+=======================Result=======================
+p点:33: if (i == TRIGGER) svp_simple_002_001_global_array[TRIGGER] = 1;
+c点:35: svp_simple_002_001_global_array[TRIGGER] = 1;
+p -> c 之间路径不可行
+=====================================================
+对第 2 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_002_001_global_array
+W:  Line:   35   svp_simple_002_001_global_array[TRIGGER] = 1;
+路径约束条件(Expr)：
+(Eq 10001 (Read w32 0 %12svp_simple_002_001_isr_1))(Eq (Read w32 0 %12svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))W:  Line:   33   if (i == TRIGGER) svp_simple_002_001_global_array[TRIGGER] = 1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %8svp_simple_002_001_isr_1))(Eq (Read w32 0 %8svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))******************************************Feasible:  sat
+对第 3 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_002_001_global_array
+W:  Line:   35   svp_simple_002_001_global_array[TRIGGER] = 1;
+路径约束条件(Expr)：
+(Eq 10001 (Read w32 0 %12svp_simple_002_001_isr_1))(Eq (Read w32 0 %12svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))R:  Line:   37   mininum = svp_simple_002_001_global_array[TRIGGER] - 10;
+路径约束条件(Expr)：
+******************************************Feasible:  unsat
+=======================Result=======================
+p点:35: svp_simple_002_001_global_array[TRIGGER] = 1;
+c点:37: mininum = svp_simple_002_001_global_array[TRIGGER] - 10;
+p -> c 之间路径不可行
+=====================================================
+对第 4 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_002_001_global_array
+W:  Line:   33   if (i == TRIGGER) svp_simple_002_001_global_array[TRIGGER] = 1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %8svp_simple_002_001_isr_1))(Eq (Read w32 0 %8svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))(Slt (Read w32 0 %5svp_simple_002_001_isr_1) 10000)(Eq (Read w32 0 %5svp_simple_002_001_isr_1) (Read w32 0 %3svp_simple_002_001_isr_1))R:  Line:   37   mininum = svp_simple_002_001_global_array[TRIGGER] - 10;
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+中断中的访问点：44 : svp_simple_002_001_global_array[TRIGGER] = 999;
+------------------------r点的pathcondition:
+中断点：Line: 35    svp_simple_002_001_global_array[TRIGGER] = 1;
+------------------p->t路径不可行----------------------
+中断点：Line: 37    mininum = svp_simple_002_001_global_array[TRIGGER] - 10;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量  的状态对中断entry->r的影响:
+ 的状态：
+(Eq 1 (Read w32 0 svp_simple_002_001_global_array))
+entry->r的路径约束：——entry->r无路径约束！
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:33: if (i == TRIGGER) svp_simple_002_001_global_array[TRIGGER] = 1;
+r点:44: svp_simple_002_001_global_array[TRIGGER] = 999;
+c点:37: mininum = svp_simple_002_001_global_array[TRIGGER] - 10;
+存在一条可行路径p->r->c，BUG
+====================================================
+=========================BUG=============================
+--------------------------变量：svp_simple_002_001_global_array
+33 : if (i == TRIGGER) svp_simple_002_001_global_array[TRIGGER] = 1;
+44 : svp_simple_002_001_global_array[TRIGGER] = 999;
+37 : mininum = svp_simple_002_001_global_array[TRIGGER] - 10;
+--------------------------------------------------------------
+=========================BUG=============================
+
+=========================Test Report=============================
+共有4对二次访问序。其中有2对路径不可行。
+共有2对三次访问序。其中原子性违反1个。
+=========================Test Report=============================
+Runtime : 0.125s
+

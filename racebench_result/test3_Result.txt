@@ -1,0 +1,275 @@
+================================DEBUG_LOG====================================
+对第 1 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_003_001_global_var2
+R:  Line:   38   reader3 = svp_simple_003_001_global_var2;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %13main))(Eq (Read w32 0 %13main) (Read w32 0 %5main))(Slt (Read w32 0 %10main) 10000)(Eq (Read w32 0 %10main) (Read w32 0 %5main))(Slt (Read w32 0 %10main) 10000)(Eq (Read w32 0 %10main) (Read w32 0 %5main))R:  Line:   38   reader3 = svp_simple_003_001_global_var2;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %13main))(Eq (Read w32 0 %13main) (Read w32 0 %5main))(Slt (Read w32 0 %10main) 10000)(Eq (Read w32 0 %10main) (Read w32 0 %5main))(Slt (Read w32 0 %10main) 10000)(Eq (Read w32 0 %10main) (Read w32 0 %5main))******************************************Feasible:  sat
+中断中的访问点：61 : enable_isr(2);
+------------------------r点的pathcondition:
+=======================Result=======================
+p点:38: reader3 = svp_simple_003_001_global_var2;
+r点:61: enable_isr(2);
+c点:38: reader3 = svp_simple_003_001_global_var2;
+不存在一条可行路径p->r->c
+====================================================
+对第 2 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_003_001_global_var2
+R:  Line:   38   reader3 = svp_simple_003_001_global_var2;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %13main))(Eq (Read w32 0 %13main) (Read w32 0 %5main))(Slt (Read w32 0 %10main) 10000)(Eq (Read w32 0 %10main) (Read w32 0 %5main))(Slt (Read w32 0 %10main) 10000)(Eq (Read w32 0 %10main) (Read w32 0 %5main))R:  Line:   43   reader4 = svp_simple_003_001_global_var2;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %26main))(Eq (Read w32 0 %26main) (Read w32 0 %6main))(Slt 0 (Read w32 0 %23main))(Eq (Read w32 0 %23main) (Read w32 0 %6main))(Slt 0 (Read w32 0 %23main))(Eq (Read w32 0 %23main) (Read w32 0 %6main))******************************************Feasible:  sat
+中断中的访问点：61 : enable_isr(2);
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 43    reader4 = svp_simple_003_001_global_var2;
+------------------p->t路径可行----------------------
+在这个t点：不允许中断 svp_simple_003_001_isr_1 发生。
+=======================Result=======================
+p点:38: reader3 = svp_simple_003_001_global_var2;
+r点:61: enable_isr(2);
+c点:43: reader4 = svp_simple_003_001_global_var2;
+不存在一条可行路径p->r->c
+====================================================
+对第 3 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_003_001_global_var2
+R:  Line:   43   reader4 = svp_simple_003_001_global_var2;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %26main))(Eq (Read w32 0 %26main) (Read w32 0 %6main))(Slt 0 (Read w32 0 %23main))(Eq (Read w32 0 %23main) (Read w32 0 %6main))(Slt 0 (Read w32 0 %23main))(Eq (Read w32 0 %23main) (Read w32 0 %6main))R:  Line:   43   reader4 = svp_simple_003_001_global_var2;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %26main))(Eq (Read w32 0 %26main) (Read w32 0 %6main))(Slt 0 (Read w32 0 %23main))(Eq (Read w32 0 %23main) (Read w32 0 %6main))(Slt 0 (Read w32 0 %23main))(Eq (Read w32 0 %23main) (Read w32 0 %6main))******************************************Feasible:  sat
+中断中的访问点：61 : enable_isr(2);
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 43    reader4 = svp_simple_003_001_global_var2;
+------------------p->t路径可行----------------------
+在这个t点：不允许中断 svp_simple_003_001_isr_1 发生。
+=======================Result=======================
+p点:43: reader4 = svp_simple_003_001_global_var2;
+r点:61: enable_isr(2);
+c点:43: reader4 = svp_simple_003_001_global_var2;
+不存在一条可行路径p->r->c
+====================================================
+对第 4 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_003_001_global_var1
+R:  Line:   50   reader1 = svp_simple_003_001_global_var1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %39main))(Eq (Read w32 0 %39main) (Read w32 0 %7main))(Slt (Read w32 0 %36main) 10000)(Eq (Read w32 0 %36main) (Read w32 0 %7main))(Slt (Read w32 0 %36main) 10000)(Eq (Read w32 0 %36main) (Read w32 0 %7main))R:  Line:   50   reader1 = svp_simple_003_001_global_var1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %39main))(Eq (Read w32 0 %39main) (Read w32 0 %7main))(Slt (Read w32 0 %36main) 10000)(Eq (Read w32 0 %36main) (Read w32 0 %7main))(Slt (Read w32 0 %36main) 10000)(Eq (Read w32 0 %36main) (Read w32 0 %7main))******************************************Feasible:  sat
+中断中的访问点：64 : if (svp_simple_003_001_global_flag == 1) {
+------------------------r点的pathcondition:
+(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+中断点：Line: 50    reader1 = svp_simple_003_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_003_001_global_flag 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag 的状态：
+(Eq 1 (Read w32 0 @svp_simple_003_001_global_flag))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_flag1 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag1 的状态：
+(Eq 0 (Read w32 0 @svp_simple_003_001_global_flag1))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_003_001_global_var1 的状态：
+(Eq 888 (Read w32 0 @svp_simple_003_001_global_var1))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_003_001_global_var2 的状态：
+(Eq 999 (Read w32 0 @svp_simple_003_001_global_var2))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:50: reader1 = svp_simple_003_001_global_var1;
+r点:64: if (svp_simple_003_001_global_flag == 1) {
+c点:50: reader1 = svp_simple_003_001_global_var1;
+存在一条可行路径p->r->c，BUG
+====================================================
+中断中的访问点：66 : } else if (svp_simple_003_001_global_flag1 == 2) {
+------------------------r点的pathcondition:
+(Eq 2 (Read w32 0 %5svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %5svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag1))
+(Eq false
+     (Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1)))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+中断点：Line: 50    reader1 = svp_simple_003_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_003_001_global_flag 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag 的状态：
+(Eq 1 (Read w32 0 @svp_simple_003_001_global_flag))
+entry->r的路径约束：(Eq 2 (Read w32 0 %5svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %5svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag1))
+(Eq false
+     (Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1)))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+svp_simple_003_001_global_flag的状态导致在中断点t：50:reader1 = svp_simple_003_001_global_var1; 导致 p -> c路径不可行。
+---------------------------------------------
+------------------p->r路径不可行----------------------
+=======================Result=======================
+p点:50: reader1 = svp_simple_003_001_global_var1;
+r点:66: } else if (svp_simple_003_001_global_flag1 == 2) {
+c点:50: reader1 = svp_simple_003_001_global_var1;
+不存在一条可行路径p->r->c
+====================================================
+对第 5 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_003_001_global_var1
+R:  Line:   50   reader1 = svp_simple_003_001_global_var1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %39main))(Eq (Read w32 0 %39main) (Read w32 0 %7main))(Slt (Read w32 0 %36main) 10000)(Eq (Read w32 0 %36main) (Read w32 0 %7main))(Slt (Read w32 0 %36main) 10000)(Eq (Read w32 0 %36main) (Read w32 0 %7main))R:  Line:   55   reader2 = svp_simple_003_001_global_var1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %52main))(Eq (Read w32 0 %52main) (Read w32 0 %8main))(Slt 0 (Read w32 0 %49main))(Eq (Read w32 0 %49main) (Read w32 0 %8main))(Slt 0 (Read w32 0 %49main))(Eq (Read w32 0 %49main) (Read w32 0 %8main))******************************************Feasible:  sat
+中断中的访问点：64 : if (svp_simple_003_001_global_flag == 1) {
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 55    reader2 = svp_simple_003_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_003_001_global_flag 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag 的状态：
+(Eq 1 (Read w32 0 @svp_simple_003_001_global_flag))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_flag1 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag1 的状态：
+(Eq 0 (Read w32 0 @svp_simple_003_001_global_flag1))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_003_001_global_var1 的状态：
+(Eq 888 (Read w32 0 @svp_simple_003_001_global_var1))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_003_001_global_var2 的状态：
+(Eq 999 (Read w32 0 @svp_simple_003_001_global_var2))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:50: reader1 = svp_simple_003_001_global_var1;
+r点:64: if (svp_simple_003_001_global_flag == 1) {
+c点:55: reader2 = svp_simple_003_001_global_var1;
+存在一条可行路径p->r->c，BUG
+====================================================
+中断中的访问点：66 : } else if (svp_simple_003_001_global_flag1 == 2) {
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 55    reader2 = svp_simple_003_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_003_001_global_flag 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag 的状态：
+(Eq 1 (Read w32 0 @svp_simple_003_001_global_flag))
+entry->r的路径约束：(Eq 2 (Read w32 0 %5svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %5svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag1))
+(Eq false
+     (Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1)))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+svp_simple_003_001_global_flag的状态导致在中断点t：55:reader2 = svp_simple_003_001_global_var1; 导致 p -> c路径不可行。
+---------------------------------------------
+------------------p->r路径不可行----------------------
+=======================Result=======================
+p点:50: reader1 = svp_simple_003_001_global_var1;
+r点:66: } else if (svp_simple_003_001_global_flag1 == 2) {
+c点:55: reader2 = svp_simple_003_001_global_var1;
+不存在一条可行路径p->r->c
+====================================================
+对第 6 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_003_001_global_var1
+R:  Line:   55   reader2 = svp_simple_003_001_global_var1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %52main))(Eq (Read w32 0 %52main) (Read w32 0 %8main))(Slt 0 (Read w32 0 %49main))(Eq (Read w32 0 %49main) (Read w32 0 %8main))(Slt 0 (Read w32 0 %49main))(Eq (Read w32 0 %49main) (Read w32 0 %8main))R:  Line:   55   reader2 = svp_simple_003_001_global_var1;
+路径约束条件(Expr)：
+(Eq 9999 (Read w32 0 %52main))(Eq (Read w32 0 %52main) (Read w32 0 %8main))(Slt 0 (Read w32 0 %49main))(Eq (Read w32 0 %49main) (Read w32 0 %8main))(Slt 0 (Read w32 0 %49main))(Eq (Read w32 0 %49main) (Read w32 0 %8main))******************************************Feasible:  sat
+中断中的访问点：64 : if (svp_simple_003_001_global_flag == 1) {
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 55    reader2 = svp_simple_003_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_003_001_global_flag 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag 的状态：
+(Eq 1 (Read w32 0 @svp_simple_003_001_global_flag))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_flag1 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag1 的状态：
+(Eq 0 (Read w32 0 @svp_simple_003_001_global_flag1))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_003_001_global_var1 的状态：
+(Eq 888 (Read w32 0 @svp_simple_003_001_global_var1))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+检测全局变量 svp_simple_003_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_003_001_global_var2 的状态：
+(Eq 999 (Read w32 0 @svp_simple_003_001_global_var2))
+entry->r的路径约束：(Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:55: reader2 = svp_simple_003_001_global_var1;
+r点:64: if (svp_simple_003_001_global_flag == 1) {
+c点:55: reader2 = svp_simple_003_001_global_var1;
+存在一条可行路径p->r->c，BUG
+====================================================
+中断中的访问点：66 : } else if (svp_simple_003_001_global_flag1 == 2) {
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 55    reader2 = svp_simple_003_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_003_001_global_flag 的状态对中断entry->r的影响:
+svp_simple_003_001_global_flag 的状态：
+(Eq 1 (Read w32 0 @svp_simple_003_001_global_flag))
+entry->r的路径约束：(Eq 2 (Read w32 0 %5svp_simple_003_001_isr_1))
+(Eq (Read w32 0 %5svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag1))
+(Eq false
+     (Eq 1 (Read w32 0 %1svp_simple_003_001_isr_1)))
+(Eq (Read w32 0 %1svp_simple_003_001_isr_1) (Read w32 0 @svp_simple_003_001_global_flag))
+svp_simple_003_001_global_flag的状态导致在中断点t：55:reader2 = svp_simple_003_001_global_var1; 导致 p -> c路径不可行。
+---------------------------------------------
+------------------p->r路径不可行----------------------
+=======================Result=======================
+p点:55: reader2 = svp_simple_003_001_global_var1;
+r点:66: } else if (svp_simple_003_001_global_flag1 == 2) {
+c点:55: reader2 = svp_simple_003_001_global_var1;
+不存在一条可行路径p->r->c
+====================================================
+=========================BUG=============================
+--------------------------变量：svp_simple_003_001_global_var1
+50 : reader1 = svp_simple_003_001_global_var1;
+64 : if (svp_simple_003_001_global_flag == 1) {
+50 : reader1 = svp_simple_003_001_global_var1;
+--------------------------------------------------------------
+--------------------------变量：svp_simple_003_001_global_var1
+50 : reader1 = svp_simple_003_001_global_var1;
+64 : if (svp_simple_003_001_global_flag == 1) {
+55 : reader2 = svp_simple_003_001_global_var1;
+--------------------------------------------------------------
+--------------------------变量：svp_simple_003_001_global_var1
+55 : reader2 = svp_simple_003_001_global_var1;
+64 : if (svp_simple_003_001_global_flag == 1) {
+55 : reader2 = svp_simple_003_001_global_var1;
+--------------------------------------------------------------
+=========================BUG=============================
+
+=========================Test Report=============================
+共有6对二次访问序。其中有0对路径不可行。
+共有9对三次访问序。其中原子性违反3个。
+=========================Test Report=============================
+Runtime : 0.453125s
+

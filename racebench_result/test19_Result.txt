@@ -1,0 +1,146 @@
+================================DEBUG_LOG====================================
+对第 1 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_para1
+W:  Line:   33   svp_simple_019_001_global_para1 = rand() % 10;
+路径约束条件(Expr)：
+R:  Line:   39   if ((svp_simple_019_001_global_para1 + svp_simple_019_001_global_para3) > svp_simple_019_001_global_para2)
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 2 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_para3
+W:  Line:   35   svp_simple_019_001_global_para3 = rand() % 10;
+路径约束条件(Expr)：
+R:  Line:   39   if ((svp_simple_019_001_global_para1 + svp_simple_019_001_global_para3) > svp_simple_019_001_global_para2)
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 3 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_para2
+W:  Line:   34   svp_simple_019_001_global_para2 = rand() % 10;
+路径约束条件(Expr)：
+R:  Line:   39   if ((svp_simple_019_001_global_para1 + svp_simple_019_001_global_para3) > svp_simple_019_001_global_para2)
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 4 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_var2
+R:  Line:   40   reader1 = svp_simple_019_001_global_var2;
+路径约束条件(Expr)：
+(Slt (Read w32 0 %15main) (Read w32 0 %14main))(Eq (Read w32 0 %14main)
+     (Add w32 (Read w32 0 %12main) (Read w32 0 %13main)))(Eq (Read w32 0 %12main) (Read w32 0 @svp_simple_019_001_global_para1))(Eq (Read w32 0 @svp_simple_019_001_global_para1) (Read w32 0 %7main))(Eq (Read w32 0 %7main)
+     (SRem w32 (Read w32 0 %6main) 10))(Eq (Read w32 0 %6main) (Read w32 0 @rand))(Eq (Read w32 0 %13main) (Read w32 0 @svp_simple_019_001_global_para3))(Eq (Read w32 0 @svp_simple_019_001_global_para3) (Read w32 0 %11main))(Eq (Read w32 0 %11main)
+     (SRem w32 (Read w32 0 %10main) 10))(Eq (Read w32 0 %10main) (Read w32 0 @rand))(Eq (Read w32 0 %15main) (Read w32 0 @svp_simple_019_001_global_para2))(Eq (Read w32 0 @svp_simple_019_001_global_para2) (Read w32 0 %9main))(Eq (Read w32 0 %9main)
+     (SRem w32 (Read w32 0 %8main) 10))(Eq (Read w32 0 %8main) (Read w32 0 @rand))R:  Line:   42   reader2 = svp_simple_019_001_global_var2;
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+中断中的访问点：61 : svp_simple_019_001_global_var2 = 0x55;
+------------------------r点的pathcondition:
+(Slt (Read w32 0 %3svp_simple_019_001_isr_1) (Read w32 0 %4svp_simple_019_001_isr_1))
+(Eq (Read w32 0 %3svp_simple_019_001_isr_1)
+     (Add w32 (Read w32 0 %1svp_simple_019_001_isr_1) (Read w32 0 %2svp_simple_019_001_isr_1)))
+(Eq (Read w32 0 %1svp_simple_019_001_isr_1) (Read w32 0 @svp_simple_019_001_global_para1))
+(Eq (Read w32 0 %2svp_simple_019_001_isr_1) (Read w32 0 @svp_simple_019_001_global_para3))
+(Eq (Read w32 0 %4svp_simple_019_001_isr_1) (Read w32 0 @svp_simple_019_001_global_para2))
+中断点：Line: 42    reader2 = svp_simple_019_001_global_var2;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+entry->p的路径与中断entry->r的路径互斥。
+=======================Result=======================
+p点:40: reader1 = svp_simple_019_001_global_var2;
+r点:61: svp_simple_019_001_global_var2 = 0x55;
+c点:42: reader2 = svp_simple_019_001_global_var2;
+不存在一条可行路径p->r->c
+====================================================
+对第 5 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_condition1
+R:  Line:   44   if ((svp_simple_019_001_global_condition1 == 1) && (svp_simple_019_001_global_condiiton2 == 1))
+路径约束条件(Expr)：
+R:  Line:   48   if ((svp_simple_019_001_global_condition1 == 1) && (svp_simple_019_001_global_condition3 == 1))
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 6 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_condiiton2
+R:  Line:   44   if ((svp_simple_019_001_global_condition1 == 1) && (svp_simple_019_001_global_condiiton2 == 1))
+路径约束条件(Expr)：
+(Eq 1 (Read w32 0 %21main))(Eq (Read w32 0 %21main) (Read w32 0 @svp_simple_019_001_global_condition1))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition1))R:  Line:   53   if ((svp_simple_019_001_global_condiiton2 == 1) && (svp_simple_019_001_global_condition3 == 0))
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 7 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_var1
+R:  Line:   45   reader3 = svp_simple_019_001_global_var1;
+路径约束条件(Expr)：
+(Eq 1 (Read w32 0 %24main))(Eq (Read w32 0 %24main) (Read w32 0 @svp_simple_019_001_global_condiiton2))(Eq 1 (Read w32 0 %21main))(Eq (Read w32 0 %21main) (Read w32 0 @svp_simple_019_001_global_condition1))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condiiton2))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition1))R:  Line:   49   reader4 = svp_simple_019_001_global_var1;
+路径约束条件(Expr)：
+(Eq 1 (Read w32 0 %32main))(Eq (Read w32 0 %32main) (Read w32 0 @svp_simple_019_001_global_condition3))(Eq 1 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 @svp_simple_019_001_global_condition1))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition3))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition1))******************************************Feasible:  sat
+中断中的访问点：65 : svp_simple_019_001_global_var1 = 0x01;
+------------------------r点的pathcondition:
+中断点：Line: 48    if ((svp_simple_019_001_global_condition1 == 1) && (svp_simple_019_001_global_condition3 == 1))
+------------------p->t路径可行----------------------
+在这个t点：不允许中断 svp_simple_019_001_isr_1 发生。
+中断点：Line: 48    if ((svp_simple_019_001_global_condition1 == 1) && (svp_simple_019_001_global_condition3 == 1))
+------------------p->t路径可行----------------------
+在这个t点：不允许中断 svp_simple_019_001_isr_1 发生。
+中断点：Line: 49    reader4 = svp_simple_019_001_global_var1;
+------------------p->t路径可行----------------------
+在这个t点：不允许中断 svp_simple_019_001_isr_1 发生。
+=======================Result=======================
+p点:45: reader3 = svp_simple_019_001_global_var1;
+r点:65: svp_simple_019_001_global_var1 = 0x01;
+c点:49: reader4 = svp_simple_019_001_global_var1;
+不存在一条可行路径p->r->c
+====================================================
+对第 8 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_var1
+R:  Line:   49   reader4 = svp_simple_019_001_global_var1;
+路径约束条件(Expr)：
+(Eq 1 (Read w32 0 %32main))(Eq (Read w32 0 %32main) (Read w32 0 @svp_simple_019_001_global_condition3))(Eq 1 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 @svp_simple_019_001_global_condition1))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition3))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition1))R:  Line:   54   reader5 = svp_simple_019_001_global_var1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %40main))(Eq (Read w32 0 %40main) (Read w32 0 @svp_simple_019_001_global_condition3))(Eq 1 (Read w32 0 %37main))(Eq (Read w32 0 %37main) (Read w32 0 @svp_simple_019_001_global_condiiton2))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition3))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condiiton2))******************************************Feasible:  unsat
+=======================Result=======================
+p点:49: reader4 = svp_simple_019_001_global_var1;
+c点:54: reader5 = svp_simple_019_001_global_var1;
+p -> c 之间路径不可行
+=====================================================
+对第 9 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_var1
+R:  Line:   45   reader3 = svp_simple_019_001_global_var1;
+路径约束条件(Expr)：
+(Eq 1 (Read w32 0 %24main))(Eq (Read w32 0 %24main) (Read w32 0 @svp_simple_019_001_global_condiiton2))(Eq 1 (Read w32 0 %21main))(Eq (Read w32 0 %21main) (Read w32 0 @svp_simple_019_001_global_condition1))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condiiton2))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition1))R:  Line:   54   reader5 = svp_simple_019_001_global_var1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %40main))(Eq (Read w32 0 %40main) (Read w32 0 @svp_simple_019_001_global_condition3))(Eq 1 (Read w32 0 %37main))(Eq (Read w32 0 %37main) (Read w32 0 @svp_simple_019_001_global_condiiton2))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition3))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condiiton2))******************************************Feasible:  unsat
+=======================Result=======================
+p点:45: reader3 = svp_simple_019_001_global_var1;
+c点:54: reader5 = svp_simple_019_001_global_var1;
+p -> c 之间路径不可行
+=====================================================
+对第 10 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_019_001_global_condition3
+R:  Line:   48   if ((svp_simple_019_001_global_condition1 == 1) && (svp_simple_019_001_global_condition3 == 1))
+路径约束条件(Expr)：
+(Eq 1 (Read w32 0 %29main))(Eq (Read w32 0 %29main) (Read w32 0 @svp_simple_019_001_global_condition1))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condition1))R:  Line:   53   if ((svp_simple_019_001_global_condiiton2 == 1) && (svp_simple_019_001_global_condition3 == 0))
+路径约束条件(Expr)：
+(Eq 1 (Read w32 0 %37main))(Eq (Read w32 0 %37main) (Read w32 0 @svp_simple_019_001_global_condiiton2))(Eq 1 (Read w32 0 @svp_simple_019_001_global_condiiton2))******************************************Feasible:  sat
+中断中的访问点：63 : svp_simple_019_001_global_condition3 = 0;
+------------------------r点的pathcondition:
+中断点：Line: 49    reader4 = svp_simple_019_001_global_var1;
+------------------p->t路径可行----------------------
+在这个t点：不允许中断 svp_simple_019_001_isr_1 发生。
+中断点：Line: 53    if ((svp_simple_019_001_global_condiiton2 == 1) && (svp_simple_019_001_global_condition3 == 0))
+------------------p->t路径可行----------------------
+在这个t点：不允许中断 svp_simple_019_001_isr_1 发生。
+中断点：Line: 53    if ((svp_simple_019_001_global_condiiton2 == 1) && (svp_simple_019_001_global_condition3 == 0))
+------------------p->t路径可行----------------------
+在这个t点：不允许中断 svp_simple_019_001_isr_1 发生。
+=======================Result=======================
+p点:48: if ((svp_simple_019_001_global_condition1 == 1) && (svp_simple_019_001_global_condition3 == 1))
+r点:63: svp_simple_019_001_global_condition3 = 0;
+c点:53: if ((svp_simple_019_001_global_condiiton2 == 1) && (svp_simple_019_001_global_condition3 == 0))
+不存在一条可行路径p->r->c
+====================================================
+=========================BUG=============================
+=========================BUG=============================
+
+=========================Test Report=============================
+共有10对二次访问序。其中有2对路径不可行。
+共有5对三次访问序。其中原子性违反0个。
+=========================Test Report=============================
+Runtime : 0.359375s
+

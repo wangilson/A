@@ -1,0 +1,186 @@
+================================DEBUG_LOG====================================
+对第 1 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_buff_p
+W:  Line:   44   svp_simple_031_001_tc_buff_p = svp_simple_031_001_tc_chan1_buff;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %3main))(Eq (Read w32 0 %3main) (Read w32 0 %2main))(Eq 0 (Read w32 0 %2main))R:  Line:   49   tc_block.type = *(svp_simple_031_001_tc_buff_p + 2);
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 2 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_buff_p
+R:  Line:   49   tc_block.type = *(svp_simple_031_001_tc_buff_p + 2);
+路径约束条件(Expr)：
+R:  Line:   50   tc_block.id = *(svp_simple_031_001_tc_buff_p + 4);
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 3 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_buff_p
+R:  Line:   50   tc_block.id = *(svp_simple_031_001_tc_buff_p + 4);
+路径约束条件(Expr)：
+R:  Line:   51   tc_block.valid_len = *(svp_simple_031_001_tc_buff_p + 5);
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 4 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_block_rcvd_bytes_ch1
+R:  Line:   46   svp_simple_031_001_tc_block_rcvd_bytes_ch1;
+路径约束条件(Expr)：
+(Eq 0 (Read w32 0 %3main))(Eq (Read w32 0 %3main) (Read w32 0 %2main))(Eq 0 (Read w32 0 %2main))R:  Line:   83   if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+中断中的访问点：90 : svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+------------------------r点的pathcondition:
+中断点：Line: 45    svp_simple_031_001_tc_block_rcvd_bytes =
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_031_001_tc_block_rcvd_bytes_ch1 的状态对中断entry->r的影响:
+svp_simple_031_001_tc_block_rcvd_bytes_ch1 的状态：
+(Eq (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1) (Read w32 0 %2svp_simple_031_001_init))
+(Eq (Read w32 0 %2svp_simple_031_001_init) (Read w32 0 %1svp_simple_031_001_init))
+(Eq (Read w32 0 %1svp_simple_031_001_init) (Read w32 0 @rand))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_031_001_tc_block_rcvd_bytes_ch2 的状态对中断entry->r的影响:
+svp_simple_031_001_tc_block_rcvd_bytes_ch2 的状态：
+(Eq (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch2) (Read w32 0 %4svp_simple_031_001_init))
+(Eq (Read w32 0 %4svp_simple_031_001_init) (Read w32 0 %3svp_simple_031_001_init))
+(Eq (Read w32 0 %3svp_simple_031_001_init) (Read w32 0 @rand))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_031_001_tc_buff_p 的状态对中断entry->r的影响:
+svp_simple_031_001_tc_buff_p 的状态：
+(Eq (Read w32 0 @svp_simple_031_001_tc_buff_p) (Read w32 0 svp_simple_031_001_tc_chan1_buff))
+entry->r的路径约束：——entry->r无路径约束！
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:46: svp_simple_031_001_tc_block_rcvd_bytes_ch1;
+r点:90: svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+c点:83: if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 5 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_block_rcvd_bytes_ch1
+R:  Line:   83   if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+路径约束条件(Expr)：
+R:  Line:   85   svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+路径约束条件(Expr)：
+(Sle 16 (Read w32 0 %3svp_simple_031_001_func_3))(Eq (Read w32 0 %3svp_simple_031_001_func_3) (Read w32 0 %2svp_simple_031_001_func_3))(Eq (Read w32 0 %2svp_simple_031_001_func_3) (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1))(Eq (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1) (Read w32 0 %2svp_simple_031_001_init))(Eq (Read w32 0 %2svp_simple_031_001_init) (Read w32 0 %1svp_simple_031_001_init))(Eq (Read w32 0 %1svp_simple_031_001_init) (Read w32 0 @rand))******************************************Feasible:  sat
+中断中的访问点：90 : svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 84    svp_simple_031_001_func_1(svp_simple_031_001_gloable_var1,
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:83: if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+r点:90: svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+c点:85: svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 6 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_block_rcvd_bytes_ch1
+R:  Line:   85   svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+路径约束条件(Expr)：
+(Sle 16 (Read w32 0 %3svp_simple_031_001_func_3))(Eq (Read w32 0 %3svp_simple_031_001_func_3) (Read w32 0 %2svp_simple_031_001_func_3))(Eq (Read w32 0 %2svp_simple_031_001_func_3) (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1))(Eq (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1) (Read w32 0 %2svp_simple_031_001_init))(Eq (Read w32 0 %2svp_simple_031_001_init) (Read w32 0 %1svp_simple_031_001_init))(Eq (Read w32 0 %1svp_simple_031_001_init) (Read w32 0 @rand))R:  Line:   65   if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 > 0) {
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+中断中的访问点：90 : svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 73    svp_simple_031_001_tc_block_rcvd_bytes_ch1 = rand();
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:85: svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+r点:90: svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+c点:65: if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 > 0) {
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 7 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_block_rcvd_bytes_ch1
+R:  Line:   83   if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+路径约束条件(Expr)：
+R:  Line:   85   svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+路径约束条件(Expr)：
+(Sle 16 (Read w32 0 %3svp_simple_031_001_func_3))(Eq (Read w32 0 %3svp_simple_031_001_func_3) (Read w32 0 %2svp_simple_031_001_func_3))(Eq (Read w32 0 %2svp_simple_031_001_func_3) (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1))(Eq (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1) (Read w32 0 %2svp_simple_031_001_init))(Eq (Read w32 0 %2svp_simple_031_001_init) (Read w32 0 %1svp_simple_031_001_init))(Eq (Read w32 0 %1svp_simple_031_001_init) (Read w32 0 @rand))******************************************Feasible:  sat
+中断中的访问点：90 : svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 84    svp_simple_031_001_func_1(svp_simple_031_001_gloable_var1,
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:83: if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+r点:90: svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+c点:85: svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 8 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_chan1_buff
+R:  Line:   49   tc_block.type = *(svp_simple_031_001_tc_buff_p + 2);
+路径约束条件(Expr)：
+R:  Line:   50   tc_block.id = *(svp_simple_031_001_tc_buff_p + 4);
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 9 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_chan1_buff
+R:  Line:   50   tc_block.id = *(svp_simple_031_001_tc_buff_p + 4);
+路径约束条件(Expr)：
+R:  Line:   51   tc_block.valid_len = *(svp_simple_031_001_tc_buff_p + 5);
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 10 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_031_001_tc_block_rcvd_bytes_ch1
+R:  Line:   83   if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+路径约束条件(Expr)：
+R:  Line:   85   svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+路径约束条件(Expr)：
+(Sle 16 (Read w32 0 %3svp_simple_031_001_func_3))(Eq (Read w32 0 %3svp_simple_031_001_func_3) (Read w32 0 %2svp_simple_031_001_func_3))(Eq (Read w32 0 %2svp_simple_031_001_func_3) (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1))(Eq (Read w32 0 @svp_simple_031_001_tc_block_rcvd_bytes_ch1) (Read w32 0 %2svp_simple_031_001_init))(Eq (Read w32 0 %2svp_simple_031_001_init) (Read w32 0 %1svp_simple_031_001_init))(Eq (Read w32 0 %1svp_simple_031_001_init) (Read w32 0 @rand))******************************************Feasible:  sat
+中断中的访问点：90 : svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 84    svp_simple_031_001_func_1(svp_simple_031_001_gloable_var1,
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:83: if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+r点:90: svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+c点:85: svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+存在一条可行路径p->r->c，BUG
+====================================================
+=========================BUG=============================
+--------------------------变量：svp_simple_031_001_tc_block_rcvd_bytes_ch1
+46 : svp_simple_031_001_tc_block_rcvd_bytes_ch1;
+90 : svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+83 : if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+--------------------------------------------------------------
+--------------------------变量：svp_simple_031_001_tc_block_rcvd_bytes_ch1
+83 : if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 >= 16) {
+90 : svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+85 : svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+--------------------------------------------------------------
+--------------------------变量：svp_simple_031_001_tc_block_rcvd_bytes_ch1
+85 : svp_simple_031_001_tc_block_rcvd_bytes_ch1);
+90 : svp_simple_031_001_tc_block_rcvd_bytes_ch1 =
+65 : if (svp_simple_031_001_tc_block_rcvd_bytes_ch1 > 0) {
+--------------------------------------------------------------
+=========================BUG=============================
+
+=========================Test Report=============================
+共有10对二次访问序。其中有0对路径不可行。
+共有5对三次访问序。其中原子性违反3个。
+=========================Test Report=============================
+Runtime : 0.265625s
+

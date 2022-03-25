@@ -1,0 +1,45 @@
+================================DEBUG_LOG====================================
+对第 1 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_015_001_global_var1
+R:  Line:   30   if ((svp_simple_015_001_global_var1 < y) &&
+路径约束条件(Expr)：
+R:  Line:   31   (svp_simple_015_001_global_var1 > x))
+路径约束条件(Expr)：
+(Slt (Read w32 0 %8main) (Read w32 0 %9main))(Eq (Read w32 0 %8main) (Read w32 0 @svp_simple_015_001_global_var1))(Eq (Read w32 0 %9main) (Read w32 0 %2main))(Eq (Read w32 0 %2main) (Read w32 0 %6main))(Eq (Read w32 0 %6main) (Read w32 0 @rand))(Eq 0 (Read w32 0 @svp_simple_015_001_global_var1))******************************************Feasible:  sat
+中断中的访问点：39 : svp_simple_015_001_global_var1 = 5;
+------------------------r点的pathcondition:
+中断点：Line: 31    (svp_simple_015_001_global_var1 > x))
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量 svp_simple_015_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_015_001_global_var1 的状态：
+(Eq 0 (Read w32 0 @svp_simple_015_001_global_var1))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_015_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_015_001_global_var2 的状态：
+(Eq 0 (Read w32 0 @svp_simple_015_001_global_var2))
+entry->r的路径约束：——entry->r无路径约束！
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:30: if ((svp_simple_015_001_global_var1 < y) &&
+r点:39: svp_simple_015_001_global_var1 = 5;
+c点:31: (svp_simple_015_001_global_var1 > x))
+存在一条可行路径p->r->c，BUG
+====================================================
+=========================BUG=============================
+--------------------------变量：svp_simple_015_001_global_var1
+30 : if ((svp_simple_015_001_global_var1 < y) &&
+39 : svp_simple_015_001_global_var1 = 5;
+31 : (svp_simple_015_001_global_var1 > x))
+--------------------------------------------------------------
+=========================BUG=============================
+
+=========================Test Report=============================
+共有1对二次访问序。其中有0对路径不可行。
+共有1对三次访问序。其中原子性违反1个。
+=========================Test Report=============================
+Runtime : 0.140625s
+

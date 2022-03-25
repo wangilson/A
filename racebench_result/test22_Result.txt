@@ -1,0 +1,237 @@
+================================DEBUG_LOG====================================
+对第 1 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var1
+W:  Line:   32   svp_simple_022_001_global_var1 = 0;
+路径约束条件(Expr)：
+R:  Line:   55   if (svp_simple_022_001_global_var1 >= 12) {
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+中断中的访问点：66 : svp_simple_022_001_global_var1 = 0;
+------------------------r点的pathcondition:
+中断点：Line: 36    svp_simple_022_001_global_array[i] = 0;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量  的状态对中断entry->r的影响:
+ 的状态：
+(Eq 0 (Read w32 0 svp_simple_022_001_global_array))
+(Eq (Read w32 0 %8main) (Read w32 0 @svp_simple_022_001_global_array))
+(Eq (Read w32 0 %7main) (Read w32 0 %6main))
+(Eq (Read w32 0 %6main) (Read w32 0 %1main))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_022_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_022_001_global_var1 的状态：
+(Eq 12 (Read w32 0 @svp_simple_022_001_global_var1))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_022_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_022_001_global_var2 的状态：
+(Eq (Read w32 0 @svp_simple_022_001_global_var2) (Read w32 0 %2svp_simple_022_001_init))
+(Eq (Read w32 0 %2svp_simple_022_001_init) (Read w32 0 @rand))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_022_001_global_var3 的状态对中断entry->r的影响:
+svp_simple_022_001_global_var3 的状态：
+(Eq (Read w32 0 @svp_simple_022_001_global_var3) (Read w32 0 %3svp_simple_022_001_init))
+(Eq (Read w32 0 %3svp_simple_022_001_init) (Read w32 0 @rand))
+entry->r的路径约束：——entry->r无路径约束！
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:32: svp_simple_022_001_global_var1 = 0;
+r点:66: svp_simple_022_001_global_var1 = 0;
+c点:55: if (svp_simple_022_001_global_var1 >= 12) {
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 2 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var1
+R:  Line:   55   if (svp_simple_022_001_global_var1 >= 12) {
+路径约束条件(Expr)：
+W:  Line:   56   svp_simple_022_001_global_var1 = 12;
+路径约束条件(Expr)：
+(Sle 12 (Read w32 0 %1svp_simple_022_001_func_3))(Eq (Read w32 0 %1svp_simple_022_001_func_3) (Read w32 0 @svp_simple_022_001_global_var1))(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))******************************************Feasible:  unsat
+=======================Result=======================
+p点:55: if (svp_simple_022_001_global_var1 >= 12) {
+c点:56: svp_simple_022_001_global_var1 = 12;
+p -> c 之间路径不可行
+=====================================================
+对第 3 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var1
+R:  Line:   55   if (svp_simple_022_001_global_var1 >= 12) {
+路径约束条件(Expr)：
+W:  Line:   58   svp_simple_022_001_global_var1 = 0;
+路径约束条件(Expr)：
+(Slt (Read w32 0 %1svp_simple_022_001_func_3) 12)(Eq (Read w32 0 %1svp_simple_022_001_func_3) (Read w32 0 @svp_simple_022_001_global_var1))(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))******************************************Feasible:  sat
+中断中的访问点：66 : svp_simple_022_001_global_var1 = 0;
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 56    svp_simple_022_001_global_var1 = 12;
+------------------p->t路径不可行----------------------
+中断点：Line: 58    svp_simple_022_001_global_var1 = 0;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:55: if (svp_simple_022_001_global_var1 >= 12) {
+r点:66: svp_simple_022_001_global_var1 = 0;
+c点:58: svp_simple_022_001_global_var1 = 0;
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 4 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var1
+W:  Line:   56   svp_simple_022_001_global_var1 = 12;
+路径约束条件(Expr)：
+(Sle 12 (Read w32 0 %1svp_simple_022_001_func_3))(Eq (Read w32 0 %1svp_simple_022_001_func_3) (Read w32 0 @svp_simple_022_001_global_var1))(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))R:  Line:   63   svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+路径约束条件(Expr)：
+******************************************Feasible:  unsat
+=======================Result=======================
+p点:56: svp_simple_022_001_global_var1 = 12;
+c点:63: svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+p -> c 之间路径不可行
+=====================================================
+对第 5 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var1
+R:  Line:   63   svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+路径约束条件(Expr)：
+R:  Line:   39   svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+中断中的访问点：66 : svp_simple_022_001_global_var1 = 0;
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 39    svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+检测全局变量  的状态对中断entry->r的影响:
+ 的状态：
+(Eq 0 (Read w32 0 svp_simple_022_001_global_array))
+(Eq (Read w32 0 %8main) (Read w32 0 @svp_simple_022_001_global_array))
+(Eq (Read w32 0 %7main) (Read w32 0 %6main))
+(Eq (Read w32 0 %6main) (Read w32 0 %1main))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_022_001_global_var1 的状态对中断entry->r的影响:
+svp_simple_022_001_global_var1 的状态：
+(Eq 12 (Read w32 0 @svp_simple_022_001_global_var1))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_022_001_global_var2 的状态对中断entry->r的影响:
+svp_simple_022_001_global_var2 的状态：
+(Eq (Read w32 0 @svp_simple_022_001_global_var2) (Read w32 0 %2svp_simple_022_001_init))
+(Eq (Read w32 0 %2svp_simple_022_001_init) (Read w32 0 @rand))
+entry->r的路径约束：——entry->r无路径约束！
+检测全局变量 svp_simple_022_001_global_var3 的状态对中断entry->r的影响:
+svp_simple_022_001_global_var3 的状态：
+(Eq (Read w32 0 @svp_simple_022_001_global_var3) (Read w32 0 %1svp_simple_022_001_func_4))
+(Eq (Read w32 0 %1svp_simple_022_001_func_4) (Read w32 0 @svp_simple_022_001_global_var1))
+(Eq 12 (Read w32 0 @svp_simple_022_001_global_var1))
+(Sle 12 (Read w32 0 %1svp_simple_022_001_func_3))
+(Eq (Read w32 0 %1svp_simple_022_001_func_3) (Read w32 0 @svp_simple_022_001_global_var1))
+(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))
+(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))
+(Slt (Read w32 0 %1svp_simple_022_001_func_3) 12)
+(Eq (Read w32 0 %1svp_simple_022_001_func_3) (Read w32 0 @svp_simple_022_001_global_var1))
+(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))
+entry->r的路径约束：——entry->r无路径约束！
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:63: svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+r点:66: svp_simple_022_001_global_var1 = 0;
+c点:39: svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 6 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var3
+W:  Line:   63   svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+路径约束条件(Expr)：
+W:  Line:   39   svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+对第 7 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var1
+W:  Line:   58   svp_simple_022_001_global_var1 = 0;
+路径约束条件(Expr)：
+(Slt (Read w32 0 %1svp_simple_022_001_func_3) 12)(Eq (Read w32 0 %1svp_simple_022_001_func_3) (Read w32 0 @svp_simple_022_001_global_var1))(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))R:  Line:   63   svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+路径约束条件(Expr)：
+******************************************Feasible:  sat
+中断中的访问点：66 : svp_simple_022_001_global_var1 = 0;
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 63    svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:58: svp_simple_022_001_global_var1 = 0;
+r点:66: svp_simple_022_001_global_var1 = 0;
+c点:63: svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+存在一条可行路径p->r->c，BUG
+====================================================
+对第 8 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var1
+R:  Line:   55   if (svp_simple_022_001_global_var1 >= 12) {
+路径约束条件(Expr)：
+W:  Line:   56   svp_simple_022_001_global_var1 = 12;
+路径约束条件(Expr)：
+(Sle 12 (Read w32 0 %1svp_simple_022_001_func_3))(Eq (Read w32 0 %1svp_simple_022_001_func_3) (Read w32 0 @svp_simple_022_001_global_var1))(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))******************************************Feasible:  unsat
+=======================Result=======================
+p点:55: if (svp_simple_022_001_global_var1 >= 12) {
+c点:56: svp_simple_022_001_global_var1 = 12;
+p -> c 之间路径不可行
+=====================================================
+对第 9 对二次访问序进行路径可行性分析------------------------------------------------
+#########    变量：svp_simple_022_001_global_var1
+R:  Line:   55   if (svp_simple_022_001_global_var1 >= 12) {
+路径约束条件(Expr)：
+W:  Line:   58   svp_simple_022_001_global_var1 = 0;
+路径约束条件(Expr)：
+(Slt (Read w32 0 %1svp_simple_022_001_func_3) 12)(Eq (Read w32 0 %1svp_simple_022_001_func_3) (Read w32 0 @svp_simple_022_001_global_var1))(Eq 0 (Read w32 0 @svp_simple_022_001_global_var1))******************************************Feasible:  sat
+中断中的访问点：66 : svp_simple_022_001_global_var1 = 0;
+在中断摘要列表中匹配到中断摘要。
+中断点：Line: 56    svp_simple_022_001_global_var1 = 12;
+------------------p->t路径不可行----------------------
+中断点：Line: 58    svp_simple_022_001_global_var1 = 0;
+------------------p->t路径可行----------------------
+检测p->r的路径可行性:
+------------------p->r路径可行----------------------
+验证中断点t->c的可行性：
+——t->c无路径约束！
+------------------t->c路径可行----------------------
+=======================Result=======================
+p点:55: if (svp_simple_022_001_global_var1 >= 12) {
+r点:66: svp_simple_022_001_global_var1 = 0;
+c点:58: svp_simple_022_001_global_var1 = 0;
+存在一条可行路径p->r->c，BUG
+====================================================
+=========================BUG=============================
+--------------------------变量：svp_simple_022_001_global_var1
+32 : svp_simple_022_001_global_var1 = 0;
+66 : svp_simple_022_001_global_var1 = 0;
+55 : if (svp_simple_022_001_global_var1 >= 12) {
+--------------------------------------------------------------
+--------------------------变量：svp_simple_022_001_global_var1
+55 : if (svp_simple_022_001_global_var1 >= 12) {
+66 : svp_simple_022_001_global_var1 = 0;
+58 : svp_simple_022_001_global_var1 = 0;
+--------------------------------------------------------------
+--------------------------变量：svp_simple_022_001_global_var1
+63 : svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+66 : svp_simple_022_001_global_var1 = 0;
+39 : svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+--------------------------------------------------------------
+--------------------------变量：svp_simple_022_001_global_var1
+58 : svp_simple_022_001_global_var1 = 0;
+66 : svp_simple_022_001_global_var1 = 0;
+63 : svp_simple_022_001_global_var3 = svp_simple_022_001_global_var1;
+--------------------------------------------------------------
+=========================BUG=============================
+
+=========================Test Report=============================
+共有9对二次访问序。其中有3对路径不可行。
+共有5对三次访问序。其中原子性违反4个。
+=========================Test Report=============================
+Runtime : 0.171875s
+
